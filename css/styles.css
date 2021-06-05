@@ -211,9 +211,10 @@ body {
   display: flex;
 }
 
-.advantage-list .box {
+/* .advantage-list .box {
   width: 270px;
-}
+} */
+
 .advantage-list .box:not(:last-child) {
   margin-right: var(--main-margin);
 }
@@ -228,12 +229,13 @@ body {
 }
 
 .icons {
-  margin-bottom: var(--main-margin);
-}
-
-.advantage-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 270px;
   height: 120px;
+  margin-bottom: var(--main-margin);
+  background-color: #f5f4fa;
 }
 
 /* FRAMEWORK */
@@ -334,6 +336,15 @@ body {
 
 /* CLIENTS */
 
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icons-color);
+  border: 1px solid var(--icons-color);
+  border-radius: 4px;
+}
+
 .clients-title {
   font-weight: 700;
   font-size: 36px;
@@ -344,10 +355,11 @@ body {
   margin-bottom: 50px;
 }
 
-.client-icon {
-  width: 190 px;
+.clients-list {
+  width: 170px;
   height: 92px;
-  border: 1px solid var(--icons-color);
+  /* border: 1px solid var(--icons-color);
+  border-radius: 4px; */
 }
 
 .clients {
@@ -358,25 +370,16 @@ body {
   margin-right: var(--main-margin);
 }
 
-.clients-svg {
-  width: 170px;
-  height: 92px;
-  border: 1px solid var(--icons-color);
-  border-radius: 4px;
-  cursor: pointer;
-  fill: var(--icons-color);
-}
-
-.clients-svg:hover,
-.clients-svg:focus {
+.clients-link:hover,
+.clients-link:focus {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.clients-svg:hover,
+/* .clients-svg:hover,
 .clients-svg:focus {
   color: var(--accent-color);
-}
+} */
 
 .client-section {
   padding: 94px 0;
@@ -514,7 +517,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   background-color: #f5f4fa;
-  border-radius: 4px;
+  border: none;
 
   padding: 6px 22px;
 }
